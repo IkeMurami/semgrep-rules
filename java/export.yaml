@@ -1,0 +1,13 @@
+rules:
+  # Ищет все: и перечисления и классы, и наследованные и расширения и тп
+  - id: java-export-class
+    pattern: |
+      package $PACKAGE;
+      ...
+      class $CLASS {
+        ...
+      }
+    message: $PACKAGE.$CLASS
+    languages:
+      - java
+    severity: INFO

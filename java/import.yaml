@@ -1,0 +1,8 @@
+rules:
+  # Ищет все импорты
+  - id: java-import
+    pattern: import $CLASS;
+    message: $CLASS
+    languages:
+      - java
+    severity: INFO
